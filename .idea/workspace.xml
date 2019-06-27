@@ -2,107 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="eb98bd4a-36a8-474e-a376-7ff38ccacc14" name="Default Changelist" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../core/bin/api.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../core/bin/api.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../core/bin/cms.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../core/bin/cms.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../core/bin/xapi.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../core/bin/xapi.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployment/tools/copier.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../deployment/tools/copier.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployment/tools/google-drive-backup/download.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../deployment/tools/google-drive-backup/download.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployment/tools/google-drive-backup/jwt.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../deployment/tools/google-drive-backup/jwt.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployment/tools/google-drive-backup/rm-obsolete-backups.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../deployment/tools/google-drive-backup/rm-obsolete-backups.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployment/tools/google-drive-backup/upload.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../deployment/tools/google-drive-backup/upload.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployment/tools/obsolete-backup-cleaner.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../deployment/tools/obsolete-backup-cleaner.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployment/tools/pg-base-backup.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../deployment/tools/pg-base-backup.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployment/tools/pg-wal-copier.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../deployment/tools/pg-wal-copier.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployment/tools/redis-snapshot-creator.sh" beforeDir="false" afterPath="$PROJECT_DIR$/../deployment/tools/redis-snapshot-creator.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../deployment/tools/resana.io.website.conf" beforeDir="false" afterPath="$PROJECT_DIR$/../deployment/tools/resana.io.website.conf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dns/src/dao.py" beforeDir="false" afterPath="$PROJECT_DIR$/../dns/src/dao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dns/src/splitter.py" beforeDir="false" afterPath="$PROJECT_DIR$/../dns/src/splitter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dns/test/init_dns_zones.py" beforeDir="false" afterPath="$PROJECT_DIR$/../dns/test/init_dns_zones.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dns/test/init_domains.py" beforeDir="false" afterPath="$PROJECT_DIR$/../dns/test/init_domains.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dns/test/init_suffix_list.py" beforeDir="false" afterPath="$PROJECT_DIR$/../dns/test/init_suffix_list.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dns/test/integration_test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../dns/test/integration_test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dns/test/test_domaindao.py" beforeDir="false" afterPath="$PROJECT_DIR$/../dns/test/test_domaindao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../dns/test/test_zonedao.py" beforeDir="false" afterPath="$PROJECT_DIR$/../dns/test/test_zonedao.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-hdpi/folder.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-hdpi/folder.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-hdpi/folder_small.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-hdpi/folder_small.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-hdpi/media_small.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-hdpi/media_small.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-hdpi/video.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-hdpi/video.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-mdpi/folder.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-mdpi/folder.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-mdpi/folder_small.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-mdpi/folder_small.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-mdpi/media_small.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-mdpi/media_small.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-mdpi/video.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-mdpi/video.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-xhdpi/folder.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-xhdpi/folder.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-xhdpi/folder_small.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-xhdpi/folder_small.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-xhdpi/media_small.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-xhdpi/media_small.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-xhdpi/video.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-xhdpi/video.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-xxhdpi/folder.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-xxhdpi/folder.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-xxhdpi/folder_small.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-xxhdpi/folder_small.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-xxhdpi/media_small.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-xxhdpi/media_small.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-xxhdpi/video.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-xxhdpi/video.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-xxxhdpi/folder.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-xxxhdpi/folder.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-xxxhdpi/folder_small.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-xxxhdpi/folder_small.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-xxxhdpi/media_small.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-xxxhdpi/media_small.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-xxxhdpi/video.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable-xxxhdpi/video.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable/pause.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable/pause.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable/play.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/drawable/play.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/mipmap-hdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/mipmap-hdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/mipmap-mdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/mipmap-mdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/mipmap-xhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/mipmap-xhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/mipmap-xxhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/resana/src/main/assets/fonts/Resana-Font.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/resana/src/main/assets/fonts/Resana-Font.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/arm64-v8a/libOMX.24.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/arm64-v8a/libOMX.24.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/arm64-v8a/libffmpeg.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/arm64-v8a/libffmpeg.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/arm64-v8a/libstlport_shared.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/arm64-v8a/libstlport_shared.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/arm64-v8a/libvao.0.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/arm64-v8a/libvao.0.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/arm64-v8a/libvinit.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/arm64-v8a/libvinit.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/arm64-v8a/libvplayer.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/arm64-v8a/libvplayer.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/arm64-v8a/libvscanner.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/arm64-v8a/libvscanner.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/arm64-v8a/libvvo.0.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/arm64-v8a/libvvo.0.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/arm64-v8a/libvvo.9.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/arm64-v8a/libvvo.9.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/armeabi-v7a/libOMX.11.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/armeabi-v7a/libOMX.11.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/armeabi-v7a/libOMX.14.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/armeabi-v7a/libOMX.14.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/armeabi-v7a/libOMX.18.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/armeabi-v7a/libOMX.18.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/armeabi-v7a/libOMX.9.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/armeabi-v7a/libOMX.9.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/armeabi-v7a/libffmpeg.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/armeabi-v7a/libffmpeg.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/armeabi-v7a/libstlport_shared.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/armeabi-v7a/libstlport_shared.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/armeabi-v7a/libvao.0.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/armeabi-v7a/libvao.0.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/armeabi-v7a/libvplayer.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/armeabi-v7a/libvplayer.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/armeabi-v7a/libvscanner.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/armeabi-v7a/libvscanner.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/armeabi-v7a/libvvo.0.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/armeabi-v7a/libvvo.0.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/armeabi-v7a/libvvo.7.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/armeabi-v7a/libvvo.7.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/armeabi-v7a/libvvo.8.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/armeabi-v7a/libvvo.8.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/armeabi-v7a/libvvo.9.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/armeabi-v7a/libvvo.9.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/armeabi-v7a/libvvo.j.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/armeabi-v7a/libvvo.j.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/x86/libOMX.14.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/x86/libOMX.14.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/x86/libOMX.18.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/x86/libOMX.18.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/x86/libOMX.9.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/x86/libOMX.9.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/x86/libffmpeg.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/x86/libffmpeg.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/x86/libstlport_shared.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/x86/libstlport_shared.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/x86/libvao.0.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/x86/libvao.0.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/x86/libvplayer.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/x86/libvplayer.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/x86/libvscanner.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/x86/libvscanner.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/x86/libvvo.0.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/x86/libvvo.0.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/x86/libvvo.9.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/x86/libvvo.9.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/x86/libvvo.j.so" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/OddrunPlayer/vitamio/libs/x86/libvvo.j.so" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/ResanaExample/app/src/main/assets/fonts/Resana-Font.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/ResanaExample/app/src/main/assets/fonts/Resana-Font.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/ResanaExample/app/src/main/res/drawable-xhdpi/pause.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/ResanaExample/app/src/main/res/drawable-xhdpi/pause.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/ResanaExample/app/src/main/res/drawable-xhdpi/play.png" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/ResanaExample/app/src/main/res/drawable-xhdpi/play.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/android/ResanaExample/gradlew" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/android/ResanaExample/gradlew" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/ios/BRBefrest/BRBefrest/BRReachability.h" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/ios/BRBefrest/BRBefrest/BRReachability.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../sdk/ios/BRBefrest/BRBefrest/BRReachability.m" beforeDir="false" afterPath="$PROJECT_DIR$/../sdk/ios/BRBefrest/BRBefrest/BRReachability.m" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../website/home/dist/style/fonts/IRANSans.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/../website/home/dist/style/fonts/IRANSans.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../website/home/dist/style/fonts/IRANSans_Light.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/../website/home/dist/style/fonts/IRANSans_Light.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../website/home/dist/style/fonts/IRANSans_Medium.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/../website/home/dist/style/fonts/IRANSans_Medium.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../website/panel/app/fonts/iran-sans/ttf/IRANSans.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/../website/panel/app/fonts/iran-sans/ttf/IRANSans.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../website/panel/app/fonts/iran-sans/ttf/IRANSans_Light.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/../website/panel/app/fonts/iran-sans/ttf/IRANSans_Light.ttf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../website/panel/app/fonts/iran-sans/ttf/IRANSans_Medium.ttf" beforeDir="false" afterPath="$PROJECT_DIR$/../website/panel/app/fonts/iran-sans/ttf/IRANSans_Medium.ttf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nik/weather/WeatherApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nik/weather/WeatherApplication.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -120,8 +22,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="312">
-              <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+            <state relative-caret-position="378">
+              <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -135,20 +37,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="21">
-              <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+              <caret line="1" selection-start-line="1" selection-end-line="1" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/nik/weather/WeatherApplication.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="42">
-              <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
+            <state relative-caret-position="105">
+              <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
             </state>
           </provider>
         </entry>
@@ -171,6 +73,7 @@
         <option value="$PROJECT_DIR$/pom.xml" />
         <option value="$PROJECT_DIR$/weather.iml" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nik/weather/WeatherApplication.java" />
       </list>
     </option>
   </component>
@@ -181,9 +84,9 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="270" />
-    <option name="y" value="48" />
+    <option name="y" value="46" />
     <option name="width" value="1625" />
     <option name="height" value="995" />
   </component>
@@ -244,7 +147,8 @@
       <option name="presentableId" value="Default" />
       <updated>1561569647281</updated>
       <workItem from="1561569652034" duration="1312000" />
-      <workItem from="1561617610085" duration="1404000" />
+      <workItem from="1561617610085" duration="1650000" />
+      <workItem from="1561619430038" duration="408000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1561618559358</created>
@@ -260,16 +164,23 @@
       <option name="project" value="LOCAL" />
       <updated>1561618800121</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="some base files">
+      <created>1561619120598</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1561619120598</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2716000" />
+    <option name="totallyTimeSpent" value="3370000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="216" y="39" width="1300" height="796" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.3043478" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25737265" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -277,7 +188,6 @@
       <window_info id="UI Designer" order="5" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Web" order="7" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -286,12 +196,13 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Spring" order="7" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.41353384" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.38354254" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Java Enterprise" order="11" />
       <window_info anchor="bottom" id="Database Changes" order="12" />
       <window_info anchor="bottom" id="Version Control" order="13" />
+      <window_info anchor="bottom" id="Messages" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -308,22 +219,17 @@
     <option name="version" value="1" />
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="SHOW_UNVERSIONED_FILES_WHILE_COMMIT" value="false" />
     <MESSAGE value="first commit" />
     <MESSAGE value=".gitignore" />
-    <option name="LAST_COMMIT_MESSAGE" value=".gitignore" />
+    <MESSAGE value="some base files" />
+    <option name="LAST_COMMIT_MESSAGE" value="some base files" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nik/weather/WeatherApplication.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="42">
-          <caret line="2" column="31" selection-start-line="2" selection-start-column="31" selection-end-line="2" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="18" column="20" lean-forward="true" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
+        <state relative-caret-position="378">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="20" selection-end-line="18" selection-end-column="20" />
         </state>
       </provider>
     </entry>
@@ -337,7 +243,14 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="21">
-          <caret line="1" lean-forward="true" selection-start-line="1" selection-end-line="1" />
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nik/weather/WeatherApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="5" column="5" selection-start-line="5" selection-start-column="5" selection-end-line="5" selection-end-column="5" />
         </state>
       </provider>
     </entry>
