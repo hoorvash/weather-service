@@ -11,9 +11,8 @@ import com.nik.weather.exception.YahooWeatherServiceException;
 import com.nik.weather.repository.CityRepository;
 import com.nik.weather.repository.WeatherRepository;
 import com.nik.weather.util.DateUtil;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-import org.aspectj.apache.bcel.generic.LOOKUPSWITCH;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -25,7 +24,7 @@ public class WeatherService {
     private final WeatherRepository weatherRepository;
     private final CityRepository cityRepository;
     private final CityService cityService;
-    private static final Logger LOGGER = LogManager.getLogger();
+    private static final Logger LOGGER = LoggerFactory.getLogger(WeatherService.class);
 
     public WeatherService(WeatherRepository weatherRepository, CityRepository cityRepository, CityService cityService) {
         this.weatherRepository = weatherRepository;
@@ -59,7 +58,7 @@ public class WeatherService {
                             return dto.createFrom(en);
                         }
                     } catch (Exception e) {
-                        LOGGER.error(e.getMessage());
+                        LOGGER.error(e.getCause() + e.getMessage());
                     }
                 } else {
                     return dto.createFrom(existedWeathers.get(0));
@@ -79,8 +78,7 @@ public class WeatherService {
         return dto;
     }
 
-    public WeatherDto getWeatherByCity(String city, String region) throws InvalidParameterException, YahooWeatherServiceException
-    {
+    public WeatherDto getWeatherByCity(String city, String region) throws InvalidParameterException, YahooWeatherServiceException {
         WeatherDto dto = new WeatherDto();
 
         if (city == null || city.isEmpty()) {
@@ -100,7 +98,7 @@ public class WeatherService {
                             return dto.createFrom(en);
                         }
                     } catch (Exception e) {
-                        LOGGER.error(e.getMessage());
+                        LOGGER.error(e.getCause() + e.getMessage());
                     }
                 } else {
                     return dto.createFrom(existedWeathers.get(0));

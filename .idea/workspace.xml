@@ -1,14 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="eb98bd4a-36a8-474e-a376-7ff38ccacc14" name="Default Changelist" comment="">
+    <list default="true" id="eb98bd4a-36a8-474e-a376-7ff38ccacc14" name="Default Changelist" comment="Logging">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/nik/weather/conn/HttpUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nik/weather/conn/HttpUtil.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nik/weather/conn/WeatherUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nik/weather/conn/WeatherUtil.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nik/weather/controller/CityWeatherController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nik/weather/controller/CityWeatherController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nik/weather/data/Constants.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nik/weather/data/Constants.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nik/weather/data/initialization/CommandLineAppStartupRunner.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nik/weather/data/initialization/CommandLineAppStartupRunner.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/nik/weather/server/WeatherDataGenerator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nik/weather/server/WeatherDataGenerator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/nik/weather/service/WeatherService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/nik/weather/service/WeatherService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,12 +37,45 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/nik/weather/controller/CityWeatherController.java">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="282">
-              <caret line="30" column="44" lean-forward="true" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+            <state relative-caret-position="43">
+              <caret line="64" column="21" lean-forward="true" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nik/weather/conn/WeatherUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="112" selection-start-line="112" selection-end-line="112" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="265">
+              <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/com/nik/weather/conn/HttpUtil.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="109">
+              <caret line="101" column="4" selection-start-line="101" selection-start-column="4" selection-end-line="101" selection-end-column="4" />
+              <folding>
+                <element signature="e#1905#2048#0" />
+                <element signature="e#2069#2125#0" />
+                <element signature="e#2929#2959#0" expanded="true" />
+                <element signature="docComment;method#fetchRawResponse#1;class#HttpUtil#0" />
               </folding>
             </state>
           </provider>
@@ -52,87 +84,38 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/nik/weather/service/WeatherService.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="77" column="22" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
+            <state relative-caret-position="127">
+              <caret line="26" column="87" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="87" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="method#WeatherService#0;class#WeatherService#0" />
-                <element signature="e#1358#1481#1" />
+                <element signature="method#getWeatherByCity#0;class#WeatherService#0" />
+                <element signature="e#1383#1506#1" />
                 <element signature="e#1591#1685#1" />
-                <element signature="e#1716#2953#1" />
-                <element signature="e#1911#2609#1" />
-                <element signature="e#2030#2503#1" />
-                <element signature="e#2056#2396#0" />
-                <element signature="e#2199#2374#1" />
-                <element signature="e#2417#2485#0" />
-                <element signature="e#2509#2595#1" />
-                <element signature="e#2615#2942#1" />
-                <element signature="e#2777#2928#1" />
-                <element signature="e#2959#3080#1" />
-                <element signature="e#3365#3488#1" />
-                <element signature="e#4206#4381#1" />
-                <element signature="e#4424#4492#0" />
-                <element signature="e#4516#4602#1" />
-                <element signature="e#4784#4935#1" />
-                <element signature="e#4966#5087#1" />
+                <element signature="e#1711#2948#1" />
+                <element signature="e#1906#2604#1" />
+                <element signature="e#2025#2498#1" />
+                <element signature="e#2051#2391#0" />
+                <element signature="e#2194#2369#1" />
+                <element signature="e#2504#2590#1" />
+                <element signature="e#2610#2937#1" />
+                <element signature="e#2772#2923#1" />
+                <element signature="e#2954#3075#1" />
+                <element signature="method#getWeatherByCity#1;class#WeatherService#0" />
+                <element signature="e#3328#3451#1" />
+                <element signature="e#3508#4736#1" />
+                <element signature="e#3702#4396#1" />
+                <element signature="e#3821#4290#1" />
+                <element signature="e#3847#4183#0" />
+                <element signature="e#3986#4161#1" />
+                <element signature="e#4296#4382#1" />
+                <element signature="e#4402#4725#1" />
+                <element signature="e#4560#4711#1" />
+                <element signature="e#4742#4863#1" />
                 <element signature="method#buildEntity#0;class#WeatherService#0" />
-                <element signature="e#3343#3391#1" />
+                <element signature="e#5126#5174#1" />
                 <element signature="method#cityExist#0;class#WeatherService#0" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/nik/weather/conn/WeatherUtil.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="126">
-              <caret line="17" column="133" selection-start-line="17" selection-start-column="133" selection-end-line="17" selection-end-column="133" />
-              <folding>
-                <element signature="method#callYahooWeatherService#0;class#WeatherUtil#0" />
-                <element signature="e#1087#4853#0" />
-                <element signature="e#2019#2119#1" />
-                <element signature="e#2180#2381#0" />
-                <element signature="e#2421#2473#0" />
-                <element signature="e#2528#3027#0" />
-                <element signature="e#2684#3013#1" />
-                <element signature="e#3048#3161#0" />
-                <element signature="e#4568#4843#1" />
-                <element signature="e#4874#5091#0" />
-                <element signature="e#4904#5081#1" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/nik/weather/data/initialization/CommandLineAppStartupRunner.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="459">
-              <caret line="36" column="28" lean-forward="true" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/com/nik/weather/server/WeatherDataGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="jar://$MAVEN_REPOSITORY$/org/springframework/spring-web/5.0.4.RELEASE/spring-web-5.0.4.RELEASE-sources.jar!/org/springframework/web/bind/annotation/RequestParam.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="163">
-              <caret line="53" column="18" selection-start-line="53" selection-start-column="18" selection-end-line="53" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -148,7 +131,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>h2</find>
       <find>getS</find>
       <find>entityManagerFactory</find>
       <find>tar</find>
@@ -175,6 +157,10 @@
       <find>getWeatherByCity</find>
       <find>1.8</find>
       <find>callYahooWeatherService</find>
+      <find>Exception</find>
+      <find>Logger</find>
+      <find>LOGGER</find>
+      <find>log4</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -216,7 +202,6 @@
         <option value="$PROJECT_DIR$/src/main/java/com/nik/weather/repository/WeatherRepository.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nik/weather/service/CityService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nik/weather/WeatherApplication.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/src/main/java/com/nik/weather/config/Swagger2Config.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nik/weather/data/payload/GeneralResponseDto.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nik/weather/data/payload/ResponseDto.java" />
@@ -225,14 +210,15 @@
         <option value="$PROJECT_DIR$/src/main/java/com/nik/weather/exception/MyException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nik/weather/exception/YahooWeatherServiceException.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nik/weather/exception/GlobalExceptionHandler.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nik/weather/conn/HttpUtil.java" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nik/weather/conn/WeatherUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nik/weather/server/WeatherDataGenerator.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nik/weather/data/initialization/CommandLineAppStartupRunner.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nik/weather/data/Constants.java" />
-        <option value="$PROJECT_DIR$/src/main/java/com/nik/weather/service/WeatherService.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/nik/weather/controller/CityWeatherController.java" />
+        <option value="$PROJECT_DIR$/src/main/resources/application.properties" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nik/weather/conn/WeatherUtil.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nik/weather/service/WeatherService.java" />
+        <option value="$PROJECT_DIR$/src/main/java/com/nik/weather/conn/HttpUtil.java" />
+        <option value="$PROJECT_DIR$/pom.xml" />
       </list>
     </option>
   </component>
@@ -307,121 +293,18 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="weather" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weather" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="weather" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weather" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="weather" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="initialization" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weather" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="weather" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-              <item name="payload" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weather" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="weather" type="462c0819:PsiDirectoryNode" />
-              <item name="exception" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weather" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="weather" type="462c0819:PsiDirectoryNode" />
-              <item name="repository" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weather" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="weather" type="462c0819:PsiDirectoryNode" />
-              <item name="server" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weather" type="b2602c69:ProjectViewProjectNode" />
-              <item name="weather" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="weather" type="462c0819:PsiDirectoryNode" />
               <item name="service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="weather" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
+              <item name="weather" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="weather" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:5.0.4.RELEASE" type="70bed36:NamedLibraryElementNode" />
-            </path>
-            <path>
-              <item name="weather" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:5.0.4.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-5.0.4.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weather" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:5.0.4.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-5.0.4.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weather" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:5.0.4.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-5.0.4.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weather" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:5.0.4.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-5.0.4.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="bind" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="weather" type="b2602c69:ProjectViewProjectNode" />
-              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
-              <item name="Maven: org.springframework:spring-web:5.0.4.RELEASE" type="70bed36:NamedLibraryElementNode" />
-              <item name="spring-web-5.0.4.RELEASE.jar" type="462c0819:PsiDirectoryNode" />
-              <item name="springframework" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="bind" type="462c0819:PsiDirectoryNode" />
-              <item name="annotation" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -512,7 +395,7 @@
       <updated>1561569647281</updated>
       <workItem from="1561569652034" duration="1312000" />
       <workItem from="1561617610085" duration="1650000" />
-      <workItem from="1561619430038" duration="78175000" />
+      <workItem from="1561619430038" duration="79873000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1561618559358</created>
@@ -556,17 +439,31 @@
       <option name="project" value="LOCAL" />
       <updated>1561808122620</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="exception handlings for yahooService">
+      <created>1561810030742</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1561810030743</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Logging">
+      <created>1561810498026</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1561810498026</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="81137000" />
+    <option name="totallyTimeSpent" value="82835000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="848" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23927614" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23927614" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -577,7 +474,7 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32914925" />
-      <window_info anchor="bottom" id="Debug" order="3" visible="true" weight="0.041841004" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.47419804" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -647,7 +544,9 @@
     <MESSAGE value="weather fetch and city fetch with yahoo service call" />
     <MESSAGE value="swagger" />
     <MESSAGE value="exception handlings" />
-    <option name="LAST_COMMIT_MESSAGE" value="exception handlings" />
+    <MESSAGE value="exception handlings for yahooService" />
+    <MESSAGE value="Logging" />
+    <option name="LAST_COMMIT_MESSAGE" value="Logging" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -678,9 +577,15 @@
         </line-breakpoint>
         <line-breakpoint type="java-line">
           <url>file://$PROJECT_DIR$/src/main/java/com/nik/weather/service/WeatherService.java</url>
-          <line>60</line>
+          <line>63</line>
           <properties />
           <option name="timeStamp" value="62" />
+        </line-breakpoint>
+        <line-breakpoint type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/nik/weather/conn/WeatherUtil.java</url>
+          <line>112</line>
+          <properties />
+          <option name="timeStamp" value="69" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
@@ -707,6 +612,11 @@
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
+      <expression>
+        <expression-string>LOGGER.error(e.getMessage())</expression-string>
+        <language-id>JAVA</language-id>
+        <evaluation-mode>EXPRESSION</evaluation-mode>
+      </expression>
       <expression>
         <expression-string>weather</expression-string>
         <language-id>JAVA</language-id>
@@ -744,11 +654,6 @@
       </expression>
       <expression>
         <expression-string>result</expression-string>
-        <language-id>JAVA</language-id>
-        <evaluation-mode>EXPRESSION</evaluation-mode>
-      </expression>
-      <expression>
-        <expression-string>WeatherUtil.getWeather(new Date().getTime()/1000, city, &quot;fa&quot;)</expression-string>
         <language-id>JAVA</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
@@ -1136,13 +1041,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="147">
-          <caret line="7" column="41" selection-start-line="7" selection-start-column="41" selection-end-line="7" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nik/weather/config/Swagger2Config.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="373">
@@ -1187,33 +1085,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nik/weather/conn/HttpUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="337">
-          <caret line="94" column="18" lean-forward="true" selection-start-line="94" selection-start-column="18" selection-end-line="94" selection-end-column="18" />
-          <folding>
-            <element signature="e#1905#2048#0" />
-            <element signature="e#2069#2125#0" />
-            <element signature="e#4028#4094#1" />
-            <element signature="e#4100#4446#1" />
-            <element signature="docComment;method#fetchRawResponse#1;class#HttpUtil#0" />
-            <element signature="e#6219#6757#1" />
-            <element signature="e#6808#7240#1" />
-            <element signature="e#7554#7596#0" />
-            <element signature="e#7690#7934#1" />
-            <element signature="e#7732#7916#0" />
-            <element signature="e#7981#8038#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="124">
-          <caret line="19" column="25" selection-start-line="19" selection-start-column="25" selection-end-line="19" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nik/weather/exception/InvalidParameterException.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -1252,60 +1123,9 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nik/weather/controller/CityWeatherController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="282">
-          <caret line="30" column="44" lean-forward="true" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
+          <caret line="30" column="44" selection-start-line="30" selection-start-column="44" selection-end-line="30" selection-end-column="44" />
           <folding>
             <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nik/weather/service/WeatherService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="77" column="22" selection-start-line="77" selection-start-column="22" selection-end-line="77" selection-end-column="22" />
-          <folding>
-            <element signature="method#WeatherService#0;class#WeatherService#0" />
-            <element signature="e#1358#1481#1" />
-            <element signature="e#1591#1685#1" />
-            <element signature="e#1716#2953#1" />
-            <element signature="e#1911#2609#1" />
-            <element signature="e#2030#2503#1" />
-            <element signature="e#2056#2396#0" />
-            <element signature="e#2199#2374#1" />
-            <element signature="e#2417#2485#0" />
-            <element signature="e#2509#2595#1" />
-            <element signature="e#2615#2942#1" />
-            <element signature="e#2777#2928#1" />
-            <element signature="e#2959#3080#1" />
-            <element signature="e#3365#3488#1" />
-            <element signature="e#4206#4381#1" />
-            <element signature="e#4424#4492#0" />
-            <element signature="e#4516#4602#1" />
-            <element signature="e#4784#4935#1" />
-            <element signature="e#4966#5087#1" />
-            <element signature="method#buildEntity#0;class#WeatherService#0" />
-            <element signature="e#3343#3391#1" />
-            <element signature="method#cityExist#0;class#WeatherService#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/com/nik/weather/conn/WeatherUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="17" column="133" selection-start-line="17" selection-start-column="133" selection-end-line="17" selection-end-column="133" />
-          <folding>
-            <element signature="method#callYahooWeatherService#0;class#WeatherUtil#0" />
-            <element signature="e#1087#4853#0" />
-            <element signature="e#2019#2119#1" />
-            <element signature="e#2180#2381#0" />
-            <element signature="e#2421#2473#0" />
-            <element signature="e#2528#3027#0" />
-            <element signature="e#2684#3013#1" />
-            <element signature="e#3048#3161#0" />
-            <element signature="e#4568#4843#1" />
-            <element signature="e#4874#5091#0" />
-            <element signature="e#4904#5081#1" />
           </folding>
         </state>
       </provider>
@@ -1313,7 +1133,7 @@
     <entry file="file://$PROJECT_DIR$/src/main/java/com/nik/weather/data/initialization/CommandLineAppStartupRunner.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="459">
-          <caret line="36" column="28" lean-forward="true" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
+          <caret line="36" column="28" selection-start-line="36" selection-start-column="28" selection-end-line="36" selection-end-column="28" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1326,6 +1146,80 @@
           <caret line="18" column="16" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nik/weather/service/WeatherService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="127">
+          <caret line="26" column="87" selection-start-line="26" selection-start-column="4" selection-end-line="26" selection-end-column="87" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="method#WeatherService#0;class#WeatherService#0" />
+            <element signature="method#getWeatherByCity#0;class#WeatherService#0" />
+            <element signature="e#1383#1506#1" />
+            <element signature="e#1591#1685#1" />
+            <element signature="e#1711#2948#1" />
+            <element signature="e#1906#2604#1" />
+            <element signature="e#2025#2498#1" />
+            <element signature="e#2051#2391#0" />
+            <element signature="e#2194#2369#1" />
+            <element signature="e#2504#2590#1" />
+            <element signature="e#2610#2937#1" />
+            <element signature="e#2772#2923#1" />
+            <element signature="e#2954#3075#1" />
+            <element signature="method#getWeatherByCity#1;class#WeatherService#0" />
+            <element signature="e#3328#3451#1" />
+            <element signature="e#3508#4736#1" />
+            <element signature="e#3702#4396#1" />
+            <element signature="e#3821#4290#1" />
+            <element signature="e#3847#4183#0" />
+            <element signature="e#3986#4161#1" />
+            <element signature="e#4296#4382#1" />
+            <element signature="e#4402#4725#1" />
+            <element signature="e#4560#4711#1" />
+            <element signature="e#4742#4863#1" />
+            <element signature="method#buildEntity#0;class#WeatherService#0" />
+            <element signature="e#5126#5174#1" />
+            <element signature="method#cityExist#0;class#WeatherService#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nik/weather/conn/WeatherUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="112" selection-start-line="112" selection-end-line="112" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/application.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="16" column="56" selection-start-line="16" selection-start-column="56" selection-end-line="16" selection-end-column="56" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="43">
+          <caret line="64" column="21" lean-forward="true" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/com/nik/weather/conn/HttpUtil.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="109">
+          <caret line="101" column="4" selection-start-line="101" selection-start-column="4" selection-end-line="101" selection-end-column="4" />
+          <folding>
+            <element signature="e#1905#2048#0" />
+            <element signature="e#2069#2125#0" />
+            <element signature="e#2929#2959#0" expanded="true" />
+            <element signature="docComment;method#fetchRawResponse#1;class#HttpUtil#0" />
           </folding>
         </state>
       </provider>

@@ -6,8 +6,8 @@ import com.nik.weather.data.vo.Weather;
 import com.nik.weather.exception.YahooWeatherServiceException;
 import com.nik.weather.util.JsonUtil;
 import org.apache.http.client.methods.HttpRequestBase;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
@@ -17,7 +17,7 @@ import java.util.*;
 
 public class WeatherUtil {
 
-    private static final Logger LOGGER = LogManager.getLogger();
+    private static final Logger LOGGER = LoggerFactory.getLogger(WeatherUtil.class);
 
     public static Weather callYahooWeatherService(String city, String region, boolean isStartup) throws YahooWeatherServiceException {
 
@@ -110,7 +110,7 @@ public class WeatherUtil {
                 return w;
             }
         } catch (Exception e) {
-            LOGGER.error(e.getMessage());
+            LOGGER.error(e.getCause() + e.getMessage());
             if (!isStartup) {
                 throw new YahooWeatherServiceException("Yahoo Service problem, please try again",
                         Constants.Weather.YAHOO_SERVICE_ERROR);

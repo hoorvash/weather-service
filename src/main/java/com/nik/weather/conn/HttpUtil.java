@@ -1,6 +1,5 @@
 package com.nik.weather.conn;
 
-import com.nik.weather.util.JsonUtil;
 import org.apache.commons.httpclient.HttpStatus;
 import org.apache.http.NameValuePair;
 import org.apache.http.client.config.RequestConfig;
@@ -15,8 +14,8 @@ import org.apache.http.impl.client.CloseableHttpClient;
 import org.apache.http.impl.client.HttpClients;
 import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.apache.http.ssl.SSLContextBuilder;
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import javax.net.ssl.SSLContext;
 import java.io.InputStream;
@@ -38,7 +37,7 @@ public class HttpUtil {
     private static SSLContext sslContext = null;
     private static IdleConnectionMonitorThread monitorThread = new IdleConnectionMonitorThread();
 
-    private static final Logger LOGGER = LogManager.getLogger();
+    private static final Logger LOGGER = LoggerFactory.getLogger(HttpUtil.class);
 
     static {
         // Increase max total connection
