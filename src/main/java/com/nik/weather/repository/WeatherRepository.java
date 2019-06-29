@@ -12,8 +12,5 @@ import java.util.List;
 public interface WeatherRepository extends JpaRepository<WeatherEntity, Long> {
 
     @Query("SELECT w FROM WeatherEntity w WHERE w.city.name = :city order by w.date DESC ")
-    List<WeatherEntity> findWeatherByName(@Param("city") String city);
-
-    @Query("SELECT w FROM WeatherEntity w WHERE w.city.name = :city order by w.date DESC ")
     List<WeatherEntity> findWeatherLastDate(@Param("city") String city);
 }

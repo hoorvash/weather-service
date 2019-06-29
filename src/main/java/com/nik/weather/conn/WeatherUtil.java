@@ -1,18 +1,19 @@
 package com.nik.weather.conn;
 
 import com.nik.weather.data.payload.Forecasts;
+import com.nik.weather.data.vo.Weather;
 import com.nik.weather.util.JsonUtil;
 import org.apache.http.client.methods.HttpRequestBase;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
 import java.io.UnsupportedEncodingException;
-import java.net.MalformedURLException;
 import java.net.URLEncoder;
 import java.util.*;
 
 public class WeatherUtil {
-    public static Forecasts getWeather(long timestamp, String city, String region) {
+
+    public static Weather callYahooWeatherService(String city, String region) {
 
         String cityRegion = city + "," + region;
 //        final String appId = "O0Rv5P7i";
@@ -21,7 +22,7 @@ public class WeatherUtil {
         final String url = "https://weather-ydn-yql.media.yahoo.com/forecastrss";
         Forecasts forecasts = new Forecasts();
         try {
-//            timestamp = new Date().getTime() / 1000;
+            long timestamp = new Date().getTime() / 1000;
             byte[] nonce = new byte[32];
             Random rand = new Random();
             rand.nextBytes(nonce);
@@ -38,9 +39,9 @@ public class WeatherUtil {
             parameters.add("format=json");
             Collections.sort(parameters);
 
-            StringBuffer parametersList = new StringBuffer();
+            StringBuilder parametersList = new StringBuilder();
             for (int i = 0; i < parameters.size(); i++) {
-                parametersList.append(((i > 0) ? "&" : "") + parameters.get(i));
+                parametersList.append((i > 0) ? "&" : "").append(parameters.get(i));
             }
 
             String signatureString = null;
@@ -55,11 +56,13 @@ public class WeatherUtil {
             String signature = null;
             try {
                 SecretKeySpec signingKey = new SecretKeySpec((consumerSecret + "&").getBytes(), "HmacSHA1");
-                Mac mac = Mac.getInstance("HmacSHA1");
-                mac.init(signingKey);
-                byte[] rawHMAC = mac.doFinal(signatureString.getBytes());
-                Base64.Encoder encoder = Base64.getEncoder();
-                signature = encoder.encodeToString(rawHMAC);
+                if (signatureString != null) {
+                    Mac mac = Mac.getInstance("HmacSHA1");
+                    mac.init(signingKey);
+                    byte[] rawHMAC = mac.doFinal(signatureString.getBytes());
+                    Base64.Encoder encoder = Base64.getEncoder();
+                    signature = encoder.encodeToString(rawHMAC);
+                }
             } catch (Exception e) {
                 System.err.println("Unable to append signature");
                 System.exit(0);
@@ -83,19 +86,26 @@ public class WeatherUtil {
 
             HttpRequestBase req = HttpUtil.buildHttpRequest("GET", url + authorizationLine + "location=" + cityRegion + "&format=json", null, headers, null);
             String json = HttpUtil.fetchRawResponse(req, 20);
-            ArrayList forcasts = (ArrayList) JsonUtil.deserialize(json, Map.class).get("forecasts");
-            Map map = (Map) forcasts.get(0);
+            ArrayList arrayList = (ArrayList) JsonUtil.deserialize(json, Map.class).get("forecasts");
+            Map map = (Map) arrayList.get(0);
 
             forecasts.setCode((Double) map.get("code"));
             forecasts.setDate((Double) map.get("date"));
             forecasts.setHigh((Double) map.get("high"));
             forecasts.setLow((Double) map.get("low"));
             forecasts.setText((String) map.get("text"));
-        } catch (MalformedURLException e) {
-            e.printStackTrace();
+
+            if (forecasts.text != null && forecasts.low != null && forecasts.high != null) {
+                Weather w = new Weather();
+                w.setCity(city);
+                w.setStatus(forecasts.text);
+                w.setMinTemp(forecasts.low.intValue());
+                w.setMaxTemp(forecasts.high.intValue());
+                return w;
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
-        return forecasts;
+        return null;
     }
 }

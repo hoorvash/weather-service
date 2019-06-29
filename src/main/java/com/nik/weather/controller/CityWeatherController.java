@@ -1,43 +1,39 @@
 package com.nik.weather.controller;
 
-import com.nik.weather.data.payload.CityDto;
 import com.nik.weather.data.payload.WeatherDto;
-import com.nik.weather.data.vo.Weather;
-import com.nik.weather.service.CityService;
 import com.nik.weather.service.WeatherService;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
-import org.springframework.web.bind.annotation.*;
-
-import javax.validation.Valid;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiParam;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("")
+@Api(value = "Weather Report API")
 public class CityWeatherController {
 
-    @Autowired
-    private WeatherService weatherService;
+    private final WeatherService weatherService;
 
-    @Autowired
-    private CityService cityService;
+    public CityWeatherController(WeatherService weatherService) {
+        this.weatherService = weatherService;
+    }
 
+    @ApiOperation(value = "View weather report based on city name if the city exists")
     @PostMapping("/weather")
-    public WeatherDto getWeatherByCity(@RequestParam String city) {
-        return weatherService.getWeatherByCity(city);
+    public WeatherDto getWeatherByCity(@ApiParam(value = "Iran's city name which already exists" +
+            " in database e.g. tehran, rasht , ...",
+            required = true) @RequestParam String city) {
+        return weatherService.getWeatherByCity(city, null, false);
     }
 
-    @PostMapping("/city/create/{name}")
-    public CityDto addCity(@PathVariable("name") String city) {
-        return cityService.add(city);
+    @ApiOperation(value = "View weather report based on city name and if the city is not in the database it creates it")
+    @PostMapping("/admin/weather")
+    public WeatherDto getWeatherByCityByAdmin(@ApiParam(value = "A Valid City name of Iran",
+            required = true) @RequestParam String city) {
+        return weatherService.getWeatherByCity(city, null, true);
     }
 
-    @RequestMapping(path = "/weather/create", method = RequestMethod.POST)
-    public WeatherDto addWeather( Weather weather){
-        return weatherService.add(weather);
-    }
-
-    @GetMapping("/city/get/{name}")
-    public CityDto getCity(@PathVariable("name") String city) {
-        return cityService.getCityByName(city);
-    }
 }

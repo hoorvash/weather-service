@@ -1,26 +1,24 @@
 package com.nik.weather.data.initialization;
 
-import com.nik.weather.conn.WeatherUtil;
-import com.nik.weather.data.payload.Forecasts;
-import com.nik.weather.data.vo.Weather;
+import com.nik.weather.server.WeatherDataGenerator;
 import com.nik.weather.service.CityService;
-import com.nik.weather.service.WeatherService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Component
 public class CommandLineAppStartupRunner implements CommandLineRunner {
 
-    @Autowired
-    private CityService cityService;
+    private final CityService cityService;
 
-    @Autowired
-    private WeatherService weatherService;
+    private final WeatherDataGenerator generator;
+
+    public CommandLineAppStartupRunner(CityService cityService, WeatherDataGenerator generator) {
+        this.cityService = cityService;
+        this.generator = generator;
+    }
 
     @Override
     public void run(String... args) {
@@ -34,19 +32,7 @@ public class CommandLineAppStartupRunner implements CommandLineRunner {
 
         for (String city : cities) {
             cityService.add(city);
-            try {
-                Forecasts f = WeatherUtil.getWeather(new Date().getTime() / 1000, city, "fa");
-                Weather w = new Weather();
-                w.setCity(city);
-                if (f.text != null && f.low != null && f.high != null) {
-                    w.setStatus(f.text);
-                    w.setMinTemp(f.low.intValue());
-                    w.setMaxTemp(f.high.intValue());
-                    weatherService.add(w);
-                }
-            }catch (Exception e){
-               e.printStackTrace();
-            }
+            generator.generate(city, "fa");
         }
     }
 }

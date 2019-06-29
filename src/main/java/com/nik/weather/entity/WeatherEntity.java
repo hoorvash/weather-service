@@ -25,7 +25,7 @@ public class WeatherEntity {
         this.id = id;
     }
 
-    @ManyToOne(fetch = FetchType.LAZY)
+    @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "fk_city", nullable = false)
     public CityEntity getCity() {
         return city;
