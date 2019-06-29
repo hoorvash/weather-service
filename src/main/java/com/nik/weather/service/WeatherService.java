@@ -11,6 +11,9 @@ import com.nik.weather.exception.YahooWeatherServiceException;
 import com.nik.weather.repository.CityRepository;
 import com.nik.weather.repository.WeatherRepository;
 import com.nik.weather.util.DateUtil;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.aspectj.apache.bcel.generic.LOOKUPSWITCH;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
@@ -22,6 +25,7 @@ public class WeatherService {
     private final WeatherRepository weatherRepository;
     private final CityRepository cityRepository;
     private final CityService cityService;
+    private static final Logger LOGGER = LogManager.getLogger();
 
     public WeatherService(WeatherRepository weatherRepository, CityRepository cityRepository, CityService cityService) {
         this.weatherRepository = weatherRepository;
@@ -55,7 +59,7 @@ public class WeatherService {
                             return dto.createFrom(en);
                         }
                     } catch (Exception e) {
-                        e.printStackTrace();
+                        LOGGER.error(e.getMessage());
                     }
                 } else {
                     return dto.createFrom(existedWeathers.get(0));
@@ -96,7 +100,7 @@ public class WeatherService {
                             return dto.createFrom(en);
                         }
                     } catch (Exception e) {
-                        e.printStackTrace();
+                        LOGGER.error(e.getMessage());
                     }
                 } else {
                     return dto.createFrom(existedWeathers.get(0));

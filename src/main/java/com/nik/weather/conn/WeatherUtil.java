@@ -6,6 +6,8 @@ import com.nik.weather.data.vo.Weather;
 import com.nik.weather.exception.YahooWeatherServiceException;
 import com.nik.weather.util.JsonUtil;
 import org.apache.http.client.methods.HttpRequestBase;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import javax.crypto.Mac;
 import javax.crypto.spec.SecretKeySpec;
@@ -15,10 +17,12 @@ import java.util.*;
 
 public class WeatherUtil {
 
+    private static final Logger LOGGER = LogManager.getLogger();
+
     public static Weather callYahooWeatherService(String city, String region, boolean isStartup) throws YahooWeatherServiceException {
 
         String cityRegion = city + "," + region;
-//        final String appId = "O0Rv5P7i";
+        //final String appId = "O0Rv5P7i";
         final String consumerKey = "dj0yJmk9UUs0UUNMQUN1SkIyJmQ9WVdrOVR6QlNkalZRTjJrbWNHbzlNQS0tJnM9Y29uc3VtZXJzZWNyZXQmc3Y9MCZ4PWE2";
         final String consumerSecret = "b4e285777ef0c86d43b8038c1d3adab23b0f78dc";
         final String url = "https://weather-ydn-yql.media.yahoo.com/forecastrss";
@@ -106,6 +110,7 @@ public class WeatherUtil {
                 return w;
             }
         } catch (Exception e) {
+            LOGGER.error(e.getMessage());
             if (!isStartup) {
                 throw new YahooWeatherServiceException("Yahoo Service problem, please try again",
                         Constants.Weather.YAHOO_SERVICE_ERROR);
