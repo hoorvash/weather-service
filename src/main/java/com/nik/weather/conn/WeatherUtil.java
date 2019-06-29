@@ -1,7 +1,9 @@
 package com.nik.weather.conn;
 
+import com.nik.weather.data.Constants;
 import com.nik.weather.data.payload.Forecasts;
 import com.nik.weather.data.vo.Weather;
+import com.nik.weather.exception.YahooWeatherServiceException;
 import com.nik.weather.util.JsonUtil;
 import org.apache.http.client.methods.HttpRequestBase;
 
@@ -13,7 +15,7 @@ import java.util.*;
 
 public class WeatherUtil {
 
-    public static Weather callYahooWeatherService(String city, String region) {
+    public static Weather callYahooWeatherService(String city, String region, boolean isStartup) throws YahooWeatherServiceException {
 
         String cityRegion = city + "," + region;
 //        final String appId = "O0Rv5P7i";
@@ -104,7 +106,10 @@ public class WeatherUtil {
                 return w;
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            if (!isStartup) {
+                throw new YahooWeatherServiceException("Yahoo Service problem, please try again",
+                        Constants.Weather.YAHOO_SERVICE_ERROR);
+            }
         }
         return null;
     }

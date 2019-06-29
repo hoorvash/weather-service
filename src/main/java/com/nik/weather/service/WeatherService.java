@@ -7,6 +7,7 @@ import com.nik.weather.data.vo.Weather;
 import com.nik.weather.entity.CityEntity;
 import com.nik.weather.entity.WeatherEntity;
 import com.nik.weather.exception.InvalidParameterException;
+import com.nik.weather.exception.YahooWeatherServiceException;
 import com.nik.weather.repository.CityRepository;
 import com.nik.weather.repository.WeatherRepository;
 import com.nik.weather.util.DateUtil;
@@ -28,27 +29,27 @@ public class WeatherService {
         this.cityService = cityService;
     }
 
-    public WeatherDto getWeatherByCity(String city, String region, boolean isAdmin) throws InvalidParameterException {
+    public WeatherDto getWeatherByCity(String city, String region, boolean isAdmin, boolean isStartup) throws InvalidParameterException, YahooWeatherServiceException {
         WeatherDto dto = new WeatherDto();
+        Weather weather;
 
         if (city == null || city.isEmpty()) {
-            throw new InvalidParameterException("Invalid name for city", Constants.Weather.INVALID_NAME);
+            throw new InvalidParameterException("Invalid name for city", Constants.Weather.INVALID_NAME_ERROR);
         }
 
         boolean cityExists = cityExist(city);
-        Weather weather;
 
         if (isAdmin && !cityExists) { //Admin can add new city and then check weather
             cityService.add(city);
         }
 
-        if (cityExist(city)) {//check if city even exist
+        if (cityExists) {//check if city even exist
 
             List<WeatherEntity> existedWeathers = weatherRepository.findWeatherLastDate(city);
             if (existedWeathers != null && existedWeathers.size() > 0) {//check weather record is for today
                 if (DateUtil.isDateBeforeToday(existedWeathers.get(0).getDate())) {
                     try {
-                        weather = WeatherUtil.callYahooWeatherService(city, region);
+                        weather = WeatherUtil.callYahooWeatherService(city, region, isStartup);
                         if (weather != null) {
                             WeatherEntity en = weatherRepository.save(buildEntity(weather));
                             return dto.createFrom(en);
@@ -60,7 +61,7 @@ public class WeatherService {
                     return dto.createFrom(existedWeathers.get(0));
                 }
             } else { // when there is no record for today
-                weather = WeatherUtil.callYahooWeatherService(city, null);
+                weather = WeatherUtil.callYahooWeatherService(city, null, isStartup);
                 if (weather != null) {
                     WeatherEntity en = weatherRepository.save(buildEntity(weather));
                     return dto.createFrom(en);
@@ -68,7 +69,48 @@ public class WeatherService {
             }
 
         } else {
-            throw new InvalidParameterException("City does not exist", Constants.Weather.INVALID_CITY);
+            throw new InvalidParameterException("City does not exist", Constants.Weather.INVALID_CITY_ERROR);
+        }
+
+        return dto;
+    }
+
+    public WeatherDto getWeatherByCity(String city, String region) throws InvalidParameterException, YahooWeatherServiceException
+    {
+        WeatherDto dto = new WeatherDto();
+
+        if (city == null || city.isEmpty()) {
+            throw new InvalidParameterException("Invalid name for city", Constants.Weather.INVALID_NAME_ERROR);
+        }
+
+        Weather weather;
+
+        if (cityExist(city)) {//check if city even exist
+            List<WeatherEntity> existedWeathers = weatherRepository.findWeatherLastDate(city);
+            if (existedWeathers != null && existedWeathers.size() > 0) {//check weather record is for today
+                if (DateUtil.isDateBeforeToday(existedWeathers.get(0).getDate())) {
+                    try {
+                        weather = WeatherUtil.callYahooWeatherService(city, region, false);
+                        if (weather != null) {
+                            WeatherEntity en = weatherRepository.save(buildEntity(weather));
+                            return dto.createFrom(en);
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                } else {
+                    return dto.createFrom(existedWeathers.get(0));
+                }
+            } else { // when there is no record for today
+                weather = WeatherUtil.callYahooWeatherService(city, null, false);
+                if (weather != null) {
+                    WeatherEntity en = weatherRepository.save(buildEntity(weather));
+                    return dto.createFrom(en);
+                }
+            }
+
+        } else {
+            throw new InvalidParameterException("City does not exist", Constants.Weather.INVALID_CITY_ERROR);
         }
 
         return dto;

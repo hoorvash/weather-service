@@ -1,6 +1,7 @@
 package com.nik.weather.data.initialization;
 
 import com.nik.weather.exception.InvalidParameterException;
+import com.nik.weather.exception.YahooWeatherServiceException;
 import com.nik.weather.server.WeatherDataGenerator;
 import com.nik.weather.service.CityService;
 import org.springframework.boot.CommandLineRunner;
@@ -22,7 +23,7 @@ public class CommandLineAppStartupRunner implements CommandLineRunner {
     }
 
     @Override
-    public void run(String... args) throws InvalidParameterException {
+    public void run(String... args) throws InvalidParameterException, YahooWeatherServiceException {
         List<String> cities = new ArrayList<>();
         cities.add("ahvaz");
         cities.add("rasht");
