@@ -1,10 +1,12 @@
 package com.nik.weather.service;
 
 import com.nik.weather.conn.WeatherUtil;
+import com.nik.weather.data.Constants;
 import com.nik.weather.data.payload.WeatherDto;
 import com.nik.weather.data.vo.Weather;
 import com.nik.weather.entity.CityEntity;
 import com.nik.weather.entity.WeatherEntity;
+import com.nik.weather.exception.InvalidParameterException;
 import com.nik.weather.repository.CityRepository;
 import com.nik.weather.repository.WeatherRepository;
 import com.nik.weather.util.DateUtil;
@@ -26,44 +28,47 @@ public class WeatherService {
         this.cityService = cityService;
     }
 
-    public WeatherDto getWeatherByCity(String city, String region, boolean isAdmin) {
+    public WeatherDto getWeatherByCity(String city, String region, boolean isAdmin) throws InvalidParameterException {
         WeatherDto dto = new WeatherDto();
 
         if (city == null || city.isEmpty()) {
-            return dto;
+            throw new InvalidParameterException("Invalid name for city", Constants.Weather.INVALID_NAME);
         }
 
-        if (isAdmin) {
-            makeSureCityExist(city);
-        }
-
-        List<WeatherEntity> existedWeathers = weatherRepository.findWeatherLastDate(city);
+        boolean cityExists = cityExist(city);
         Weather weather;
-        if (existedWeathers != null && existedWeathers.size() > 0) {
-            if (DateUtil.isDateBeforeToday(existedWeathers.get(0).getDate())) {
-                try {
-                    weather = WeatherUtil.callYahooWeatherService(city, region);
-                    if (weather != null) {
-                        WeatherEntity en = weatherRepository.save(buildEntity(weather));
-                        return dto.createFrom(en);
-                    }
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
-            } else {
-                return dto.createFrom(existedWeathers.get(0));
-            }
-        } else {
-            try {
 
+        if (isAdmin && !cityExists) { //Admin can add new city and then check weather
+            cityService.add(city);
+        }
+
+        if (cityExist(city)) {//check if city even exist
+
+            List<WeatherEntity> existedWeathers = weatherRepository.findWeatherLastDate(city);
+            if (existedWeathers != null && existedWeathers.size() > 0) {//check weather record is for today
+                if (DateUtil.isDateBeforeToday(existedWeathers.get(0).getDate())) {
+                    try {
+                        weather = WeatherUtil.callYahooWeatherService(city, region);
+                        if (weather != null) {
+                            WeatherEntity en = weatherRepository.save(buildEntity(weather));
+                            return dto.createFrom(en);
+                        }
+                    } catch (Exception e) {
+                        e.printStackTrace();
+                    }
+                } else {
+                    return dto.createFrom(existedWeathers.get(0));
+                }
+            } else { // when there is no record for today
                 weather = WeatherUtil.callYahooWeatherService(city, null);
                 if (weather != null) {
                     WeatherEntity en = weatherRepository.save(buildEntity(weather));
                     return dto.createFrom(en);
                 }
-            } catch (Exception e) {
-                e.printStackTrace();
             }
+
+        } else {
+            throw new InvalidParameterException("City does not exist", Constants.Weather.INVALID_CITY);
         }
 
         return dto;
@@ -82,10 +87,8 @@ public class WeatherService {
         return en;
     }
 
-    private void makeSureCityExist(String cityName) {
+    private boolean cityExist(String cityName) {
         List<CityEntity> cityEntities = cityRepository.findCityByName(cityName);
-        if (cityEntities == null || cityEntities.size() == 0) {
-            cityService.add(cityName);
-        }
+        return cityEntities != null && cityEntities.size() != 0;
     }
 }

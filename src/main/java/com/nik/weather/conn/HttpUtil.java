@@ -72,19 +72,6 @@ public class HttpUtil {
             .build();
 
     @SuppressWarnings("unchecked")
-    public static <T> T fetchJson(HttpRequestBase request, Class<T> cls) throws Exception {
-        return fetchJson(request, cls, defaultRequestTimeout / 1000);
-    }
-
-    public static <T> T fetchJson(HttpRequestBase request, Class<T> cls, int timeout) throws Exception {
-        String response = fetchRawResponse(request, timeout);
-        LOGGER.info("RESPONSE: {}", response);
-
-        if (response.trim().length() > 0)
-            return JsonUtil.deserialize(response, cls);
-
-        return null;
-    }
 
     private static String fetchRawResponse(HttpRequestBase request) throws Exception {
         StringBuilder responseBuilder = new StringBuilder();
@@ -110,18 +97,6 @@ public class HttpUtil {
         }
     }
 
-    private static void fireAndForget(HttpRequestBase request) throws Exception {
-        try (CloseableHttpResponse response = HttpUtil.httpClient.execute(request)) {
-            int statusCode = response.getStatusLine().getStatusCode();
-
-            if (statusCode != HttpStatus.SC_OK)
-                throw new Exception(String.format(
-                        "Response status is [%s] for URL [%s]", statusCode, request.getURI().toString()));
-        } finally {
-            request.releaseConnection();
-        }
-    }
-
     /**
      * @param timeout In seconds
      */
@@ -134,17 +109,6 @@ public class HttpUtil {
 
         request.setConfig(config);
         return fetchRawResponse(request);
-    }
-
-    public static void fireAndForget(HttpRequestBase request, int timeout) throws Exception {
-        timeout *= 1000;
-        RequestConfig config = RequestConfig.custom()
-                .setConnectTimeout(timeout)
-                .setConnectionRequestTimeout(timeout)
-                .setSocketTimeout(timeout).build();
-
-        request.setConfig(config);
-        fireAndForget(request);
     }
 
     public static HttpRequestBase buildHttpRequest(
